@@ -287,7 +287,7 @@ user_chats = {}
 def get_chat_session(chat_id):
     if chat_id not in user_chats:
         user_chats[chat_id] = client.chats.create(
-            model="gemini-3.8-flash",
+            model="gemini-2.0-flash-lite",
             config=genai_types.GenerateContentConfig(
                 system_instruction=system_prompt,
                 tools=[
